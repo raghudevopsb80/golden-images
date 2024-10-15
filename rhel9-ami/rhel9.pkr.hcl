@@ -13,7 +13,7 @@ source "amazon-ebs" "rhel9" {
   ami_name      = "rhel9-golden-image"
   instance_type = "t3.small"
   region        = "us-east-1"
-  source_ami    = "ami-041e2ea9402c46c32"
+  source_ami    = "ami-09c813fb71547fc4f"
   ssh_username  = "ec2-user"
   ssh_password  = var.ssh_password
 }
