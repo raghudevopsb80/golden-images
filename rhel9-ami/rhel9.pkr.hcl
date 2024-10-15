@@ -30,7 +30,7 @@ build {
 
   provisioner "shell-local" {
     inline = [
-      "ansible-playbook -i ${build.Host}, -e ansible_user=ec2-user -e ${var.ssh_password} main.yml"
+      "ansible-playbook -i ${build.Host}, -e ansible_user=ec2-user -e ansible_password=${var.ssh_password} main.yml"
     ]
 
   }
