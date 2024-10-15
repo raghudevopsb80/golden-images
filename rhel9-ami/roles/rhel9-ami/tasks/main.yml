@@ -1,6 +1,17 @@
-- name: Update libxml2
+- name: CVE-2024-25062 - libxml2
   ansible.builtin.dnf:
     name: libxml2-2.9.13-6.el9_4
     state: latest
 
+- name: CVE-2024-2961 - libnsl, glibc-devel and 5 more
+  ansible.builtin.dnf:
+    name: "{{ item }}-2.34-100.el9_4.4"
+    state: latest
+  loop:
+    - libnsl
+    - glibc-devel
+    - glibc-minimal-langpack
+    - glibc-gconv-extra
+    - glibc-common
+    - glibc
 
