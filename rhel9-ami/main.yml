@@ -1,0 +1,6 @@
+- name: Golden Image
+  hosts: all
+  tasks:
+    - name: Print
+      ansible.builtin.debug:
+        msg: Hello
