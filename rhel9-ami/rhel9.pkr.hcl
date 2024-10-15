@@ -1,5 +1,13 @@
 variable "ssh_password" {}
 
+packer {
+  required_plugins {
+    amazon = {
+      source  = "github.com/hashicorp/amazon"
+    }
+  }
+}
+
 source "amazon-ebs" "rhel9" {
   ami_name      = "rhel9-golden-image"
   instance_type = "t3.small"
